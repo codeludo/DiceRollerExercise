@@ -4,4 +4,5 @@
     <string name="countUp_label_btn">Count Up</string>
     <string name="result_text">Hello World!</string>
     <string name="reset_label_btn">Reset</string>
+    <string name="content_dice_images">dice images</string>
 </resources>
