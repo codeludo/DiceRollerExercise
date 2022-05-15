@@ -11,7 +11,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var diceImage1: ImageView
     private lateinit var diceImage2: ImageView
     private lateinit var rollButton: Button
-    private lateinit var countUpButton: Button
     private lateinit var resetButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,15 +20,10 @@ class MainActivity : AppCompatActivity() {
         diceImage1 = findViewById(R.id.dice_image1)
         diceImage2 = findViewById(R.id.dice_image2)
         rollButton = findViewById(R.id.roll_button)
-        countUpButton = findViewById(R.id.countUp_button)
         resetButton = findViewById(R.id.reset_button)
 
         rollButton.setOnClickListener {
             rollDice()
-        }
-
-        countUpButton.setOnClickListener {
-            countUp()
         }
 
         resetButton.setOnClickListener {
@@ -38,16 +32,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun reset() {
-        TODO()
+        diceImage1.setImageResource(R.drawable.empty_dice)
+        diceImage2.setImageResource(R.drawable.empty_dice)
     }
 
     private fun rollDice(){
         diceImage1.setImageResource(getRandomDiceImage())
         diceImage2.setImageResource(getRandomDiceImage())
-    }
-
-    private fun countUp(){
-        TODO()
     }
 
     private fun getRandomDiceImage(): Int{
