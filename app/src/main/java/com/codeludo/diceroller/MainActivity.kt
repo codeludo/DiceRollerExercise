@@ -7,10 +7,19 @@ import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
+    // best way
     private lateinit var diceImage: ImageView
     private lateinit var rollButton: Button
     private lateinit var countUpButton: Button
     private lateinit var resetButton: Button
+
+    /*
+    // complicate code because is necessary check nullity every time we use it
+    private var diceImage: ImageView? = null
+    private var rollButton: Button? = null
+    private var countUpButton: Button? = null
+    private var resetButton: Button? = null
+    */
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
